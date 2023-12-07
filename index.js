@@ -2,7 +2,7 @@ function calculate() {
 
   let userinputDate = document.getElementById('dob').value;
 
-  let dateArray = userDate.split('-');
+  let dateArray = userinputDate.split('-');
   let userYear = dateArray[0];
   let userMonth = dateArray[1];
   let userDate = dateArray[2];
@@ -19,7 +19,7 @@ function calculate() {
   var resultMonth = (12 - userMonth);
   
   var resultElement = document.querySelector('.result');
-  resultElement.innerHTML = "Your are " + resultYear + " year & " + resultMonth + "months Old!";
+  resultElement.innerHTML = "Your are " + resultYear + " year & " + resultMonth + " months Old!";
 
 
 }
