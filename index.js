@@ -1,9 +1,11 @@
 function calculate() {
 
-  let userDate = document.getElementById('dob').value;
+  let userinputDate = document.getElementById('dob').value;
 
   let dateArray = userDate.split('-');
   let userYear = dateArray[0];
+  let userMonth = dateArray[1];
+  let userDate = dateArray[2];
 
 
   let currentDate = new Date();
@@ -13,9 +15,13 @@ function calculate() {
 
   var exactDate = day + "-" + month + "-" + year;
 
-  var AgeCalc = (year - userYear);
+  var resultYear = (year - userYear);
+  var resultMonth = (12 - userMonth);
+  
   var resultElement = document.querySelector('.result');
-  resultElement.innerHTML = "Your are " + AgeCalc + " years Old !";
+  resultElement.innerHTML = "Your are " + resultYear + " year & " + resultMonth + "months Old!";
 
 
 }
+
+
